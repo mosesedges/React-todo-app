@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    margin: 20 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(216, 11, 90);
+    color: white;
+    border-bottom: 2px solid navy;
+    text-shadow: 2px 2px 2px darkmagenta;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+}
+
+p::before {
+    background-color: orangered;
+    height: 20px;
+    width: 20px;
+}
+
+.todo {
+    margin: 12px;
+    padding: 10px;
+    background-color: snow;
+    width: 60vw;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: navy;
+    border-radius: 10px 0;
+    transform: skewX(-5deg);
+    border: 1px solid rgb(216, 11, 90);
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    width: 60vw;
+    text-transform: capitalize;
+    color: navy;
+    border: 2px solid rgb(216, 11, 90);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+input:focus {
+    outline: none;
+    border-radius: 5px;
+    transform: skewX(-5deg);
+}
+
+.button-holder {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px;
+    margin: 10px 0 -5px 0;
+    font-size: 1.3rem;
+    background-color: rgb(216, 11, 90);
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px darkmagenta;
+    text-transform: capitalize;
+    border: none;
+}
+
+@media(max-width:700px) {
+    .todo {
+        width: 80vw;
+        color: navy;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        /* transform: skewX(0deg); */
+        background: transparent;
+        border: 2px solid rgb(216, 11, 90);
+        margin-top: 10px;
+    }
+    .button-holder {
+        flex-direction: column;
+        margin: 2px auto;
+    }
+    button {
+        padding: 10px 0px;
+        border-radius: 10px;
+        width: 60vw;
+        margin: 5px auto;
+        background: rgb(216, 11, 90);
+        color: white;
+        text-shadow: none;
+        font-size: 14px;
+    }
+    input {
+        width: 80vw;
+        color: rgb(216, 11, 90);
+        border-left: 5px solid navy;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    input:active {
+        transform: scale(2.5);
+        transition-duration: 2s;
+    }
+}
